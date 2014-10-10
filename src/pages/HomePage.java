@@ -8,8 +8,6 @@ public class HomePage {
 	
 	@FindBy(xpath = ".//*[text() = 'Sign in']") public WebElement signinButton;
 	@FindBy(xpath = ".//*[@id='gs_htif0']") public WebElement searchTextbox;
-	
-	
 	public HomePage (WebDriver driver) {
 		this.driver = driver;
 	}
