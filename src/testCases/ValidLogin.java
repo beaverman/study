@@ -31,4 +31,8 @@ public class ValidLogin {
 		Thread.sleep(10000);
 	}
 
+    public void endTest() {
+        driver.quit();
+    }
+
 }
