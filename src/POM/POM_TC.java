@@ -1,14 +1,10 @@
 package POM;
 import automationFramework.StartWebDriver;
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 
 public class POM_TC {
     public static WebDriver driver;
-    private static WebDriver check;
 
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Starting browser");
@@ -29,7 +25,7 @@ public class POM_TC {
         System.out.println("Signing in!");
         SignInPage.SignIn(driver).click();
 
-        Thread.sleep(1500);
+        Thread.sleep(2000);
         driver.close();
     }
 }
