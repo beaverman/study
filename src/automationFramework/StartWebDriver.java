@@ -20,25 +20,29 @@ public class StartWebDriver {
 	
 	
 	public WebDriver init () {
-		
-		WindowsUtils.tryToKillByName("chromedriver.exe");
+		try {
+			WindowsUtils.tryToKillByName("chromedriver.exe");
+			System.out.println("Closing existing webdriver instance. Starting new webdriver");
+		}
+		catch (Exception x) {
+			System.out.println("No webdriver running. Starting new webdriver");
+		}
+
 		
 		switch (webDriverType) {
 				
 			case "ff":
-				WebDriver temp1 = new FirefoxDriver();
-				driver = temp1;
+				driver = new FirefoxDriver();
 				break;
 				
 			case "ch":
 				System.setProperty("webdriver.chrome.driver", "d:\\Work\\Development\\chromedriver.exe");
-				WebDriver temp2 = new ChromeDriver();
-				driver = temp2;
+				driver = new ChromeDriver();
+
 				break;
 			default:
 				System.setProperty("webdriver.chrome.driver", "d:\\Work\\Development\\chromedriver.exe");
-				WebDriver temp3 = new ChromeDriver();
-				driver = temp3;
+				driver = new ChromeDriver();
 				break;
 		}
 		

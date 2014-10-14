@@ -31,7 +31,7 @@ public class POM_TC {
 
 		try {
 			WebElement element = driver.findElement(By.xpath(".//*[@id='smsUserPin']"));
-			System.out.println("Login succesful");
+			System.out.println("Login successful");
 		}
 		catch (Exception e) {
 			System.out.println("Login failed");
